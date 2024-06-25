@@ -34,6 +34,11 @@ export default defineComponent({
       };
     }
   },
+  methods: {
+    handlePageClick(page) {
+      this.$emit('page-click', page);
+    }
+  },
   render() {
     return (
       <div ref="wrapper" class={this.wrapperClass}>
@@ -44,6 +49,9 @@ export default defineComponent({
         ) : (
           <TreeMenu ref="menu" />
         )}
+        <div class="pagination">
+          {this.$slots.pagination ? this.$slots.pagination({ handlePageClick: this.handlePageClick }) : null}
+        </div>
       </div>
     );
   }
