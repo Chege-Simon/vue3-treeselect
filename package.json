@@ -1,12 +1,12 @@
 {
-  "name": "@zanmato/vue3-treeselect",
+  "name": "@chege-simon/vue3-treeselect",
   "version": "0.1.4",
   "description": "Tree select hierarchical component for Vue 3",
   "main": "dist/vue3-treeselect.cjs.min.js",
   "unpkg": "dist/vue3-treeselect.umd.min.js",
   "css": "dist/vue3-treeselect.min.css",
   "style": "dist/vue3-treeselect.min.css",
-  "author": "zanmato",
+  "author": "Chege Simon",
   "scripts": {
     "build-library": "webpack build --config webpack.lib.config.js --mode production",
     "build-docs": "webpack build --config webpack.docs.config.js --mode production",
@@ -67,13 +67,13 @@
     "vue": "^3.0.0"
   },
   "bugs": {
-    "url": "https://github.com/zanmato/vue3-treeselect/issues"
+    "url": "https://github.com/Chege-Simon/vue3-treeselect/issues"
   },
   "browserslist": [
     "Android >= 4.0",
     "iOS >= 8"
   ],
-  "homepage": "https://github.com/zanmato/vue3-treeselect",
+  "homepage": "https://github.com/Chege-Simon/vue3-treeselect",
   "files": [
     "dist/*.js",
     "dist/*.css",
@@ -91,10 +91,12 @@
     "hierarchy",
     "hierarchical"
   ],
-  "unmockedModulePathPatterns": ["jasmine-expect"],
+  "unmockedModulePathPatterns": [
+    "jasmine-expect"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zanmato/vue3-treeselect.git"
+    "url": "git+https://github.com/Chege-Simon/vue3-treeselect.git"
   }
 }

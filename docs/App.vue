@@ -8,17 +8,12 @@
         </a>
       </div>
       <nav class="site-header-nav">
-        <a
-          class="site-header-nav-item"
-          href="https://github.com/zanmato/vue3-treeselect/releases">
+        <a class="site-header-nav-item" href="https://github.com/Chege-Simon/vue3-treeselect/releases">
           v{{ require("../package.json").version }}
         </a>
         <span class="site-header-nav-item">
-          <a
-            class="github-button"
-            href="https://github.com/zanmato/vue3-treeselect"
-            data-show-count="true"
-            aria-label="Star zanmato/vue3-treeselect on GitHub">
+          <a class="github-button" href="https://github.com/Chege-Simon/vue3-treeselect" data-show-count="true"
+            aria-label="Star Chege-Simon/vue3-treeselect on GitHub">
             Star
           </a>
         </span>
@@ -29,19 +24,11 @@
     <section id="main">
       <div id="sidebar">
         <div class="sidebar-nav" :class="{ sticky: state.isNavSticky }">
-          <section
-            v-for="(s, i) in sections"
-            :key="i"
-            class="sidebar-nav-section">
+          <section v-for="(s, i) in sections" :key="i" class="sidebar-nav-section">
             <h4 class="sidebar-nav-section-title">{{ s.name }}</h4>
             <template v-if="s.children">
-              <ul
-                v-for="(c, j) in s.children"
-                :key="j"
-                class="sidebar-nav-list">
-                <li
-                  class="sidebar-nav-list-item"
-                  :class="{ current: state.currentPosition === c.id }">
+              <ul v-for="(c, j) in s.children" :key="j" class="sidebar-nav-list">
+                <li class="sidebar-nav-list-item" :class="{ current: state.currentPosition === c.id }">
                   <a :href="`#${c.id}`">{{ c.name }}</a>
                 </li>
               </ul>
@@ -51,7 +38,9 @@
       </div>
       <div id="content">
         <section-header name="Introduction" />
-        <a href="https://github.com/zanmato/vue3-treeselect">vue3-treeselect</a>
+        <a href="https://github.com/Chege-Simon/vue3-treeselect">
+          vue3-treeselect
+        </a>
         is a multi-select component with nested options support for
         <a href="https://www.vuejs.org">Vue.js</a>
         .
@@ -78,10 +67,10 @@
         <section-header name="Getting started" />
         <p>It's recommended to install vue3-treeselect via npm.</p>
         <pre class="language-bash">
-          <code class="language-bash">
-            npm install --save @zanmato/vue3-treeselect
-          </code>
-        </pre>
+    <code class="language-bash">
+      npm install --save @chege-simon/vue3-treeselect
+    </code>
+  </pre>
 
         <section-header name="Guides" />
 
@@ -108,33 +97,33 @@
         nodes is quite simple:
 
         <pre class="language-javascript">
-          <code class="language-javascript">
-          {
-            id: '&lt;id&gt;', // used to identify the option within the tree so its value must be unique across all options
-            label: '&lt;label&gt;', // used to display the option
-          }
-          </code>
-        </pre>
+    <code class="language-javascript">
+      {
+      id: '&lt;id&gt;', // used to identify the option within the tree so its value must be unique across all options
+      label: '&lt;label&gt;', // used to display the option
+      }
+    </code>
+  </pre>
 
         Defining branch nodes only needs an extra
         <code>children</code>
         property:
 
         <pre class="language-javascript">
-          <code class="language-javascript">
-          {
-            id: '&lt;id&gt;',
-            label: '&lt;label&gt;',
-            children: [
-              {
-                id: '&lt;child id&gt;',
-                label: '&lt;child label&gt;',
-              },
-              ...
-            ],
-          }
-          </code>
-        </pre>
+    <code class="language-javascript">
+      {
+      id: '&lt;id&gt;',
+      label: '&lt;label&gt;',
+      children: [
+      {
+      id: '&lt;child id&gt;',
+      label: '&lt;child label&gt;',
+      },
+      ...
+      ],
+      }
+    </code>
+  </pre>
 
         <p>
           Then you can pass an array of these nodes as the
